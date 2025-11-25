@@ -1,7 +1,7 @@
         <dependency>
             <groupId>com.huawei.agconnect.server</groupId>
             <artifactId>agconnect-database-server-sdk</artifactId>
-            <version>1.0.9.300</version>
+            <version>1.0.13.300</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/lib/agconnect-database-server-sdk-1.0.9.300.jar</systemPath>
+            <systemPath>${project.basedir}/lib/agconnect-database-server-sdk-1.0.13.300.jar</systemPath>
         </dependency>

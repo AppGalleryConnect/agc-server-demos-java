@@ -194,12 +194,12 @@ source.db.password=root
         <dependency>
             <groupId>com.huawei.agconnect.server</groupId>
             <artifactId>agconnect-auth</artifactId>
-            <version>1.2.0.301</version>
+            <version>1.2.7.300</version>
         </dependency>
         <dependency>
             <groupId>com.huawei.agconnect.server</groupId>
             <artifactId>agconnect-database-server-sdk</artifactId>
-            <version>1.0.9.300</version>
+            <version>1.0.13.300</version>
         </dependency>
         ...
     </dependencies>
@@ -207,9 +207,7 @@ source.db.password=root
 
 ​	上述软件包版本仅作参考，请根据实际情况选择修改。
 
-​	由于泛化对象接口在agconnect-database-server-sdk的1.0.9.300版本开始支持，若使用之前的版本将无法使用泛化接口，请将demo中使用com.huawei.agconnect.server.clouddb.request.CloudDBZoneGenericObject类的部分移除，避免编译出错。或将软件包升级至1.0.9.300或更新的版本后使用。
-
-​	AGC相关SDK包会间接依赖部分开源软件，示例pom.xml文件中已按需添加相关依赖，若使用过程中仍旧出现软件包缺失的情况，请按需添加依赖或修改合适的版本。
+​	AGC相关SDK包会间接依赖部分开源软件，示例pom.xml文件中已按需添加相关依赖，若使用过程中仍旧出现软件包缺失的情况，请按需添加依赖或修改合适的版本。若使用三方镜像仓库下载com.huawei.agconnect.server失败，请使用pom.xml文件中的maven仓库地址。
 
 ## 表结构模型类注解详细说明
 
@@ -415,7 +413,7 @@ public class ColumnMapping {
 
 6. 使用DataHandler实例对象和进度处理实现类实例化DataMigrate对象。
 
-7. 调用DataMigrate类提供的三种示例接口实现迁移或数据导出逻辑。
+7. 调用DataMigrate类提供的三种示例接口实现迁移或数据导出逻辑，选择其中一种即可。
 
    ​	migrateAsTargetObject()接口：
 
@@ -426,8 +424,6 @@ public class ColumnMapping {
    ​	migrateAsGenericObject()接口：
 
    ​	将数据从源数据库中读取到Cloud DB提供的泛化对象CloudDBZoneGenericObject中，调用CloudDBZone.executeUpsert()接口将数据存入Cloud DB。
-
-   ​	由于泛化对象接口在agconnect-database-server-sdk-1.0.9.300版本才提供，若使用agconnect-database-server-sdk之前的版本将无法使用泛化接口，可选择参考使用migrateAsTargetObject()接口实现。
    
 ------
    

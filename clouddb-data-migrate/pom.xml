@@ -61,12 +61,12 @@
         <dependency>
             <groupId>com.huawei.agconnect.server</groupId>
             <artifactId>agconnect-auth</artifactId>
-            <version>1.2.0.301</version>
+            <version>1.2.7.300</version>
         </dependency>
         <dependency>
             <groupId>com.huawei.agconnect.server</groupId>
             <artifactId>agconnect-database-server-sdk</artifactId>
-            <version>1.0.8.300</version>
+            <version>1.0.13.300</version>
         </dependency>
     </dependencies>
 
@@ -92,7 +92,7 @@
                             <mainClass>com.huawei.agc.clouddb.quickstart.Application</mainClass>
                         </manifest>
                         <manifestEntries>
-                            <class-Path>lib/agconnect-database-server-sdk-1.0.9.300.B116.jar</class-Path>
+                            <class-Path>lib/agconnect-database-server-sdk-1.0.13.300.jar</class-Path>
                         </manifestEntries>
                     </archive>
                 </configuration>

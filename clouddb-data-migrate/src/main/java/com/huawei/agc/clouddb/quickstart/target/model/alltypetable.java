@@ -152,12 +152,12 @@ public final class alltypetable extends CloudDBZoneObject {
         return ByteArrayT;
     }
 
-    @JSONField(name = "TextT", deserializeUsing = Text.TextValueSerializer.class)
+    @JSONField(name = "TextT", deserializeUsing = Text.TextValueReader.class)
     public void setTextT(Text TextT) {
         this.TextT = TextT;
     }
 
-    @JSONField(name = "TextT", serializeUsing = Text.TextValueSerializer.class)
+    @JSONField(name = "TextT", serializeUsing = Text.TextValueWriter.class)
     public Text getTextT() {
         return TextT;
     }
